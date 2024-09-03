@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'System';
+  src: url('./assets/fonts/SeuratProB.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'System', sans-serif;
+}
+
+@font-face {
+  font-family: 'Dialogue';
+  src: url('./assets/fonts/RodinBokutohProEB.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
