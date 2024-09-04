@@ -54,3 +54,9 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
+.image {
+  max-width: 100%; /* Make sure the image does not exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the entire image is visible within the container */
+}

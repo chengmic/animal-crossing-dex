@@ -1,9 +1,12 @@
 import './App.css';
 import MainMenu from './components/MainMenu';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <MainMenu />
+    <BrowserRouter>
+      <MainMenu />
+    </BrowserRouter>
   );
 }
 
