@@ -1,6 +1,6 @@
 import { Grid2 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import VillagerCard from './VillagerCard';
+import VillagerTile from './VillagerTile';
 
 function Villagers() {
     const navigate = useNavigate();
@@ -11,7 +11,7 @@ function Villagers() {
     return (
     <Grid2>
         <button onClick={goBack}>Go Back</button>
-        <VillagerCard />
+        <VillagerTile />
     
     </Grid2>
     );
