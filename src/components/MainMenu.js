@@ -9,13 +9,13 @@ function MainMenu() {
     <HeroSection /> 
         <Grid2 container size ={12} spacing={8}>
             {/* Characters */}
-            <Grid2 size={1} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <Link style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
                     <p style={{wordBreak: 'break-all'}}>Characters</p>
                 </Link>
             </Grid2>
-            <Grid2 size={1} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
             
             {/* Villagers */}
             <Link to="/villagers" style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
@@ -25,7 +25,7 @@ function MainMenu() {
             </Grid2>
 
             {/* Music */}
-            <Grid2 size={1} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
             <Link style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
                     <p style={{wordBreak: 'break-all'}}>Music</p>
