@@ -1,10 +1,23 @@
 import { Grid2 } from '@mui/material';
 import portrait from '../assets/images/bob.png';
+import { useNavigate } from 'react-router-dom';
 
 function VillagerCard() {
+
+    const navigate = useNavigate();
+
+    const goBack = () => {
+        navigate(-1);
+    }
+
     return (
     /* Villager Card */
     <Grid2 container flexDirection={'column'}>
+        {/*Back Button*/}
+        <Grid2>
+        <button onClick={goBack}>Go Back</button>
+        </Grid2>
+        
         {/*Character Name*/}
         <Grid2>
         <h1>Bob</h1>
