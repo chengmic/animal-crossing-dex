@@ -1,22 +1,32 @@
+import { useEffect, useState } from 'react';
 import { Grid2 } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import VillagerTile from './VillagerTile';
-import { Link } from 'react-router-dom';
 
 function Villagers() {
-    const navigate = useNavigate();
+    const [villagers, setVillagers] = useState([]);
 
-    const goBack = () => {
-        navigate(-1);
-    }
+    useEffect(() => {
+        const fetchVillagers = async () => {
+            // fetch data
+            const response = await fetch('https://api.nookipedia.com/villagers', {
+                headers: {
+                    'X-API-KEY': process.env.REACT_APP_API_KEY,
+                    'Accept-Version': '1.0.0'
+                }
+            });
+            
+            // store data
+            const data = (await response.json());
+            setVillagers(data);
+            console.log(data)
+        }
+
+        fetchVillagers();
+    }, []);
 
     return (
-    <Grid2>
-        <button onClick={goBack}>Go Back</button>
-        <Link to="/VillagerCard">
-            <VillagerTile />
-        </Link>
-    
+    <Grid2 container>
+        {villagers.map((item) => item.name)}
     </Grid2>
     );
 }
