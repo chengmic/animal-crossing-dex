@@ -26,7 +26,12 @@ function Villagers() {
 
     return (
     <Grid2 container>
-        {villagers.map((item) => item.name)}
+        {villagers.map((villager) => (
+            <VillagerTile
+            name={villager.name}
+            portrait={villager.image_url}
+            />
+            ))}
     </Grid2>
     );
 }

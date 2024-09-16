@@ -1,7 +1,6 @@
 import { Grid2 } from '@mui/material';
-import portrait from '../assets/images/bob.png';
 
-function VillagerTile() {
+function VillagerTile({name, portrait}) {
     return (
     <Grid2 container size={1} style= {{flexDirection: 'column', alignItems: 'center'}}>
         {/*Character Portrait*/}
@@ -11,7 +10,7 @@ function VillagerTile() {
         
         {/*Character Name*/}
         <Grid2>
-            <p>Bob</p>
+            {name}
         </Grid2>
     </Grid2>
     );
