@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainMenu />} />
         <Route path="/villagers" element={<Villagers />} />
-        <Route path="/villagercard" element={<VillagerCard />} />
+        <Route path="/villagercard/:name" element={<VillagerCard />} />
       </Routes>
 
     </BrowserRouter>

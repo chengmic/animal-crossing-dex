@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Grid2 } from '@mui/material';
 import VillagerTile from './VillagerTile';
+import { useNavigate } from 'react-router-dom';
 
 function Villagers() {
+    const navigate = useNavigate()
+    const goBack = () => navigate(-1)
+    
     const [villagers, setVillagers] = useState([]);
 
     useEffect(() => {
@@ -25,13 +29,18 @@ function Villagers() {
     }, []);
 
     return (
-    <Grid2 container>
-        {villagers.map((villager) => (
-            <VillagerTile
-            name={villager.name}
-            portrait={villager.image_url}
-            />
-            ))}
+    <Grid2>
+        {/*Back button*/}
+        <Grid2><button onClick={goBack}>Go Back</button></Grid2>
+        
+        {/*Pass data to villager tile*/}
+        <Grid2 container>
+            {villagers.map((villager) => (
+                <VillagerTile
+                villagerData={villager}
+                />
+                ))}
+        </Grid2>
     </Grid2>
     );
 }

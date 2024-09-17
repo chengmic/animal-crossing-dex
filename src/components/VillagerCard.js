@@ -1,14 +1,13 @@
 import { Grid2 } from '@mui/material';
-import portrait from '../assets/images/bob.png';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function VillagerCard() {
+    const location = useLocation();
+    const villager = location.state;
 
     const navigate = useNavigate();
 
-    const goBack = () => {
-        navigate(-1);
-    }
+    const goBack = () => navigate(-1);
 
     return (
     /* Villager Card */
@@ -20,12 +19,12 @@ function VillagerCard() {
         
         {/*Character Name*/}
         <Grid2>
-        <h1>Bob</h1>
+        <h1>{villager.name}</h1>
         </Grid2>
 
         {/*Character Portrait*/}
         <Grid2 size={2}>
-        <img src= {portrait} alt="portrait" style={{maxWidth: "100%"}}></img>
+        <img src= {villager.image_url} alt="portrait" style={{maxWidth: "100%"}}></img>
         </Grid2>
 
         {/*Quick Info*/}
@@ -33,19 +32,19 @@ function VillagerCard() {
             {/*Species*/}
             <Grid2 container spacing={1} style={{display:'flex', flexDirection:'horizontal' }}>
             <p>Species</p>
-            <p>Cat</p>
+            <p>{villager.species}</p>
             </Grid2>
 
             {/*Type*/}
             <Grid2 container spacing={1} style={{display:'flex', flexDirection:'horizontal' }}>
-            <p>Type</p>
-            <p>Lazy</p>
+            <p>Personality</p>
+            <p>{villager.personality}</p>
             </Grid2>
 
             {/*Gender*/}
             <Grid2 container spacing={1} style={{display:'flex', flexDirection:'horizontal' }}>
             <p>Gender</p>
-            <p>Male</p>
+            <p>{villager.gender}</p>
             </Grid2>
 
         </Grid2>
@@ -53,19 +52,19 @@ function VillagerCard() {
         {/*Birthday*/}
         <Grid2 container spacing={1} style={{display:'flex', flexDirection:'horizontal' }}>
         <p>Birthday</p>
-        <p>January 1st</p>
+        <p>{villager.birthday_month} {villager.birthday_day}</p>
         </Grid2>
 
         {/*Catchphrase*/}
         <Grid2 container spacing={1} style={{display:'flex', flexDirection:'horizontal' }}>
         <p>Catchphrase</p>
-        <p>"pthhpth"</p>
+        <p>"{villager.phrase}"</p>
         </Grid2>
 
         {/*Quote*/}
         <Grid2 container spacing={1} style={{display:'flex', flexDirection:'horizontal' }}>
         <p>Quote</p>
-        <p>"You only live once...or nine times."</p>
+        <p>"{villager.quote}"</p>
         </Grid2>
     </Grid2>
     );
