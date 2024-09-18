@@ -53,6 +53,8 @@ function VillagerCard() {
         <Grid2 container spacing={1} style={{display:'flex', flexDirection:'horizontal' }}>
         <p>Birthday</p>
         <p>{villager.birthday_month} {villager.birthday_day}</p>
+        <p>Sign</p>
+        <p>{villager.sign}</p>
         </Grid2>
 
         {/*Catchphrase*/}
