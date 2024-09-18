@@ -8,27 +8,21 @@ function MainMenu() {
   <Grid2 container size ={12}>
     <HeroSection /> 
         <Grid2 container size ={12} spacing={8}>
-            {/* Characters */}
-            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <Link style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
-                    <p style={{wordBreak: 'break-all'}}>Characters</p>
-                </Link>
-            </Grid2>
-            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
-            
             {/* Villagers */}
-            <Link to="/villagers" style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
-                    <p style={{wordBreak: 'break-all'}}>Villagers</p>
+            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <Link to="/villagers" style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+                        <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
+                        <p style={{wordBreak: 'break-all'}}>Villagers</p>
                 </Link>
             </Grid2>
 
-            {/* Music */}
+            {/* Fish */}
             <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
-            <Link style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <Link
+                    to="/fish" 
+                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
-                    <p style={{wordBreak: 'break-all'}}>Music</p>
+                    <p style={{wordBreak: 'break-all'}}>Fish</p>
                 </Link>
             </Grid2>
         </Grid2>
