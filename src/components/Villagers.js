@@ -38,6 +38,7 @@ function Villagers() {
             {villagers.map((villager) => (
                 <Tiles
                 objectData={villager}
+                objectType='villager'
                 />
                 ))}
         </Grid2>

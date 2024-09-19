@@ -37,6 +37,7 @@ function Bugs() {
             {bugs.map((bug) => (
                 <Tiles
                 objectData={bug}
+                objectType='bug'
                 />
                 ))}
         </Grid2>

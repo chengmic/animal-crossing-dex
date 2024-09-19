@@ -37,6 +37,7 @@ function Fishes() {
             {fishes.map((fish) => (
                 <Tiles
                 objectData={fish}
+                objectType='fish'
                 />
                 ))}
         </Grid2>

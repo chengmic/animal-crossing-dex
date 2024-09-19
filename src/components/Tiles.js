@@ -2,12 +2,22 @@ import { Grid2 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 
-function Tiles({objectData}) {
+function Tiles({objectData, objectType}) {
 
     const navigate =useNavigate();
 
-    const handleVillagerClick = () =>{
-        navigate(`/villagercard/${objectData.name}`, {state: objectData});
+    const handleTileClick = () =>{
+        if (objectType === 'villager') {
+            navigate(`/villagercard/${objectData.name}`, {state: objectData});
+        }
+
+        if (objectType === 'fish') {
+            navigate(`./fishcard/${objectData.name}`, {state: objectData});
+        }
+
+        if (objectType === 'bug') {
+            navigate(`./bugcard/${objectData.name}`, {state: objectData});
+        }
     }
 
     return (
@@ -15,7 +25,7 @@ function Tiles({objectData}) {
     <Grid2 container
         size={1}
         style= {{flexDirection: 'column', alignItems: 'center'}}
-        onClick={handleVillagerClick}
+        onClick={handleTileClick}
     >
         {/*Portrait*/}
         <Grid2>
