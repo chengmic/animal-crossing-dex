@@ -25,6 +25,15 @@ function MainMenu() {
                     <p style={{wordBreak: 'break-all'}}>Fish</p>
                 </Link>
             </Grid2>
+            {/* Bugs */}
+            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <Link
+                    to="/bugs" 
+                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
+                    <p style={{wordBreak: 'break-all'}}>Bugs</p>
+                </Link>
+            </Grid2>
         </Grid2>
     </Grid2>
     );
