@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Grid2 } from '@mui/material';
-import VillagerTile from './VillagerTile';
+import Tiles from './Tiles';
 import { useNavigate } from 'react-router-dom';
 
 function Villagers() {
@@ -36,8 +36,8 @@ function Villagers() {
         {/*Pass data to villager tile*/}
         <Grid2 container>
             {villagers.map((villager) => (
-                <VillagerTile
-                villagerData={villager}
+                <Tiles
+                objectData={villager}
                 />
                 ))}
         </Grid2>

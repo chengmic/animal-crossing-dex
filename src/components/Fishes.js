@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Grid2 } from '@mui/material';
-import FishTile from './FishTile';
+import Tiles from './Tiles';
 import { useNavigate } from 'react-router-dom';
 
 function Fishes() {
@@ -35,8 +35,8 @@ function Fishes() {
         {/*Pass data to fish tile*/}
         <Grid2 container>
             {fishes.map((fish) => (
-                <FishTile
-                fishData={fish}
+                <Tiles
+                objectData={fish}
                 />
                 ))}
         </Grid2>
