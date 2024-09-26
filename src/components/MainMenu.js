@@ -10,7 +10,10 @@ function MainMenu() {
         <Grid2 container size ={12} spacing={8}>
             {/* Villagers */}
             <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <Link to="/villagers" style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <Link to="/villagers"
+                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
+                    state={{ objectType: 'villager' }}
+                    >
                         <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
                         <p style={{wordBreak: 'break-all'}}>Villagers</p>
                 </Link>
@@ -20,18 +23,22 @@ function MainMenu() {
             <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
             <Link
                     to="/fish" 
-                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
-                    <p style={{wordBreak: 'break-all'}}>Fish</p>
+                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
+                    state={{ objectType: 'fish' }}
+                    >
+                        <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
+                        <p style={{wordBreak: 'break-all'}}>Fish</p>
                 </Link>
             </Grid2>
             {/* Bugs */}
             <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
             <Link
                     to="/bugs" 
-                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
-                    <p style={{wordBreak: 'break-all'}}>Bugs</p>
+                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
+                    state={{ objectType: 'bug' }}
+                    >
+                        <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
+                        <p style={{wordBreak: 'break-all'}}>Bugs</p>
                 </Link>
             </Grid2>
         </Grid2>

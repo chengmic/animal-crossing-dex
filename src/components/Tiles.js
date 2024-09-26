@@ -8,15 +8,27 @@ function Tiles({objectData, objectType}) {
 
     const handleTileClick = () =>{
         if (objectType === 'villager') {
-            navigate(`/villagercard/${objectData.name}`, {state: objectData});
+            navigate(`./${objectData.name}`, {state: objectData});
         }
 
         if (objectType === 'fish') {
-            navigate(`./fishcard/${objectData.name}`, {state: objectData});
+            navigate(`./${objectData.name}`, {state: objectData});
         }
 
         if (objectType === 'bug') {
-            navigate(`./bugcard/${objectData.name}`, {state: objectData});
+            navigate(`./${objectData.name}`, {state: objectData});
+        }
+
+        if (objectType === 'seacreature') {
+            navigate(`./${objectData.name}`, {state: objectData});
+        }
+
+        if (objectType === 'fossil') {
+            navigate(`./${objectData.name}`, {state: objectData});
+        }
+
+        if (objectType === 'art') {
+            navigate(`./${objectData.name}`, {state: objectData});
         }
     }
 
