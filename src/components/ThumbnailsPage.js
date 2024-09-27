@@ -3,7 +3,7 @@ import { Grid2 } from '@mui/material';
 import Tiles from './Tiles';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-function ThumbnailsPage(type) {
+function ThumbnailsPage() {
     const navigate = useNavigate()
     const location = useLocation()
 
@@ -58,7 +58,6 @@ function ThumbnailsPage(type) {
             {objects.map((object) => (
                 <Tiles
                 objectData={object}
-                objectType={type}
                 />
                 ))}
         </Grid2>
