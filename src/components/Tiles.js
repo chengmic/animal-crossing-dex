@@ -11,23 +11,11 @@ function Tiles({objectData, objectType}) {
             navigate(`./${objectData.name}`, {state: objectData});
         }
 
-        if (objectType === 'fish') {
+        else if (objectType === 'fish') {
             navigate(`./${objectData.name}`, {state: objectData});
         }
 
-        if (objectType === 'bug') {
-            navigate(`./${objectData.name}`, {state: objectData});
-        }
-
-        if (objectType === 'seacreature') {
-            navigate(`./${objectData.name}`, {state: objectData});
-        }
-
-        if (objectType === 'fossil') {
-            navigate(`./${objectData.name}`, {state: objectData});
-        }
-
-        if (objectType === 'art') {
+        else if (objectType === 'bug') {
             navigate(`./${objectData.name}`, {state: objectData});
         }
     }

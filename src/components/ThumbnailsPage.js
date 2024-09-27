@@ -39,11 +39,11 @@ function ThumbnailsPage(type) {
         }
 
         else if (type === 'fish') {
-            return 'https://api.nookipedia.com/fish';
+            return 'https://api.nookipedia.com/nh/fish';
         }
 
-        else if (type === 'bugs') {
-            return 'https://api.nookipedia.com/bugs';
+        else if (type === 'bug') {
+            return 'https://api.nookipedia.com/nh/bugs';
         }
     }
 
