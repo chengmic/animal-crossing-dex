@@ -2,22 +2,12 @@ import { Grid2 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 
-function Tiles({objectData, objectType}) {
+function Tiles({objectData}) {
 
     const navigate =useNavigate();
 
     const handleTileClick = () =>{
-        if (objectType === 'villager') {
-            navigate(`./${objectData.name}`, {state: objectData});
-        }
-
-        else if (objectType === 'fish') {
-            navigate(`./${objectData.name}`, {state: objectData});
-        }
-
-        else if (objectType === 'bug') {
-            navigate(`./${objectData.name}`, {state: objectData});
-        }
+         navigate(`./${objectData.name}`, {state: objectData});
     }
 
     return (
