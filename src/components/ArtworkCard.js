@@ -52,11 +52,11 @@ function ArtworkCard() {
         </Grid2>
         
         <Grid2>
-            <p>Buy Price: {artwork.buy} bells</p>
+            <p>Buy Price: {artwork.buy} Bells</p>
         </Grid2>
 
         <Grid2>
-            <p>Sell Price: {artwork.sell} bells</p>
+            <p>Sell Price: {artwork.sell} Bells</p>
         </Grid2>
     </Grid2>
     );

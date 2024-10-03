@@ -40,7 +40,7 @@ function SeaCreatureCard() {
         </Grid2>
 
         <Grid2>
-            <p>Sell Price: {seaCreature.sell_nook}</p>
+            <p>Sell Price: {seaCreature.sell_nook} Bells</p>
         </Grid2>
 
         <Grid2>

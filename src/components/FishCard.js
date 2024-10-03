@@ -42,7 +42,7 @@ function FishCard() {
             </Grid2>
 
             <Grid2>
-                <p>Sell Price: {fish.sell_nook} bells</p>
+                <p>Sell Price: {fish.sell_nook} Bells</p>
             </Grid2>
 
             <Grid2>

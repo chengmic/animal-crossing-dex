@@ -36,7 +36,7 @@ function BugCard() {
         </Grid2>
 
         <Grid2>
-            <p>Sell Price: {bug.sell_nook} bells</p>
+            <p>Sell Price: {bug.sell_nook} Bells</p>
         </Grid2>
 
         <Grid2>
