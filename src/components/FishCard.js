@@ -31,11 +31,11 @@ function FishCard() {
             </Grid2>
 
             <Grid2>
-                <p>Location: {fish.location}</p>
-            </Grid2>
-
-            <Grid2>
                 <p>Rarity: {fish.rarity}</p>
+            </Grid2>
+            
+            <Grid2>
+                <p>Location: {fish.location}</p>
             </Grid2>
 
             <Grid2>
