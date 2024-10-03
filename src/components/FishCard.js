@@ -10,8 +10,7 @@ function FishCard() {
     const navigate = useNavigate();
     const goBack = () => navigate(-1);
 
-
-
+    
     /* Fish Card */
     return (
         <Grid2 container flexDirection={'column'}>
@@ -33,7 +32,7 @@ function FishCard() {
             <Grid2>
                 <p>Rarity: {fish.rarity}</p>
             </Grid2>
-            
+
             <Grid2>
                 <p>Location: {fish.location}</p>
             </Grid2>
