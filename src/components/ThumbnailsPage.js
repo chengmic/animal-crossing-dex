@@ -45,6 +45,16 @@ function ThumbnailsPage() {
         else if (type === 'bug') {
             return 'https://api.nookipedia.com/nh/bugs';
         }
+
+        else if (type === 'seaCreature') {
+            return 'https://api.nookipedia.com/nh/sea';
+        }
+        else if (type === 'fossil') {
+            return 'https://api.nookipedia.com/nh/fossils/individuals';
+        }
+        else if (type === 'artwork') {
+            return 'https://api.nookipedia.com/nh/art';
+        }
     }
 
     

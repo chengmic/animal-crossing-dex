@@ -21,7 +21,7 @@ function MainMenu() {
 
             {/* Fish */}
             <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
-            <Link
+                <Link
                     to="/fish" 
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
                     state={{ objectType: 'fish' }}
@@ -30,15 +30,52 @@ function MainMenu() {
                         <p style={{wordBreak: 'break-all'}}>Fish</p>
                 </Link>
             </Grid2>
+
             {/* Bugs */}
             <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
-            <Link
+                <Link
                     to="/bugs" 
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
                     state={{ objectType: 'bug' }}
                     >
                         <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
                         <p style={{wordBreak: 'break-all'}}>Bugs</p>
+                </Link>
+            </Grid2>
+
+            {/*Sea Creatures*/}
+            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <Link
+                    to="/seacreatures" 
+                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
+                    state={{ objectType: 'seaCreature' }}
+                    >
+                        <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
+                        <p style={{wordBreak: 'break-all'}}>Sea Creatures</p>
+                </Link>
+            </Grid2>
+
+            {/*Fossils*/}
+            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <Link
+                    to="/fossils" 
+                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
+                    state={{ objectType: 'fossil' }}
+                    >
+                        <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
+                        <p style={{wordBreak: 'break-all'}}>Fossils</p>
+                </Link>
+            </Grid2>
+
+            {/*Artwork*/}
+            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <Link
+                    to="/artworks" 
+                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
+                    state={{ objectType: 'artwork' }}
+                    >
+                        <img src={SampleImage} alt="sample" style={{maxWidth: "100%"}}></img>
+                        <p style={{wordBreak: 'break-all'}}>Artworks</p>
                 </Link>
             </Grid2>
         </Grid2>
