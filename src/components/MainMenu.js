@@ -21,7 +21,7 @@ function MainMenu() {
                 <Link to="/villagers"
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
                     state={{ objectType: 'villager' }}
-                    >
+                >
                         <img src={VillagerIcon} alt="sample" style={{maxWidth: "100%"}}></img>
                         <p style={{wordBreak: 'break-all'}}>Villagers</p>
                 </Link>
@@ -45,7 +45,7 @@ function MainMenu() {
                     to="/bugs" 
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
                     state={{ objectType: 'bug' }}
-                    >
+                >
                         <img src={BugIcon} alt="sample" style={{maxWidth: "100%"}}></img>
                         <p style={{wordBreak: 'break-all'}}>Bugs</p>
                 </Link>
@@ -57,7 +57,7 @@ function MainMenu() {
                     to="/seacreatures" 
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
                     state={{ objectType: 'seaCreature' }}
-                    >
+                >
                         <img src={SeaCreatureIcon} alt="sample" style={{maxWidth: "100%"}}></img>
                         <p style={{wordBreak: 'break-all'}}>Sea Creatures</p>
                 </Link>
@@ -69,7 +69,7 @@ function MainMenu() {
                     to="/fossils" 
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
                     state={{ objectType: 'fossil' }}
-                    >
+                >
                         <img src={FossilIcon} alt="sample" style={{maxWidth: "100%"}}></img>
                         <p style={{wordBreak: 'break-all'}}>Fossils</p>
                 </Link>
@@ -81,7 +81,7 @@ function MainMenu() {
                     to="/artworks" 
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
                     state={{ objectType: 'artwork' }}
-                    >
+                >
                         <img src={ArtworkIcon} alt="sample" style={{maxWidth: "100%"}}></img>
                         <p style={{wordBreak: 'break-all'}}>Artworks</p>
                 </Link>

@@ -2,12 +2,23 @@ import { Grid2 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 
-function Tiles({objectData}) {
-
-    const navigate =useNavigate();
+function Tiles({objectData, type}) {
+    if (objectData.nh_details !== undefined){
+        console.log(objectData)
+    }
+    
+    const navigate = useNavigate();
 
     const handleTileClick = () =>{
          navigate(`./${objectData.name}`, {state: objectData});
+    }
+
+    let imageSource;
+    if ((type === 'villager') && (objectData.nh_details !== null)) {
+        imageSource = objectData.nh_details.icon_url
+    }
+    else {
+        imageSource = objectData.image_url
     }
 
     return (
@@ -20,7 +31,7 @@ function Tiles({objectData}) {
         {/*Portrait*/}
         <Grid2>
             <img
-                src= {objectData.image_url}
+                src= {imageSource}
                 alt="portrait"
                 style={{maxWidth: "100%"}}
             ></img>

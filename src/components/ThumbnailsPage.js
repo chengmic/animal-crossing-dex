@@ -3,16 +3,14 @@ import { Grid2 } from '@mui/material';
 import Tiles from './Tiles';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-function ThumbnailsPage() {
+function ThumbnailsPage({}) {
     const navigate = useNavigate()
     const location = useLocation()
-
     const goBack = () => navigate(-1)
-    const {objectType} = location.state
+    const objectType = location.state.objectType
     const [objects, setObjects] = useState([]);
 
     useEffect(() => {
-        // fetch data
         const fetchObjects = async () => {
             
             const url = getApiUrl(objectType);
@@ -35,7 +33,7 @@ function ThumbnailsPage() {
     // helper function to get api url
     const getApiUrl = (type) => {
         if (type === 'villager') {
-            return 'https://api.nookipedia.com/villagers';
+            return 'https://api.nookipedia.com/villagers?nhdetails=true'
         }
 
         else if (type === 'fish') {
@@ -65,11 +63,16 @@ function ThumbnailsPage() {
         
         {/*Pass data to tile*/}
         <Grid2 container>
-            {objects.map((object) => (
-                <Tiles
-                objectData={object}
+            {objects.map((object) => {
+
+                if (object.nh_details !== null){
+                    return <Tiles
+                    objectData={object}
+                    type={objectType}
                 />
-                ))}
+                }
+                
+            })}
         </Grid2>
     </Grid2>
     );
