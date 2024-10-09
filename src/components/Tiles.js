@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 function Tiles({objectData, type}) {
     if (objectData.nh_details !== undefined){
-        console.log(objectData)
     }
     
     const navigate = useNavigate();
