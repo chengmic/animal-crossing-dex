@@ -13,11 +13,11 @@ import ArtworkIcon from '../assets/images/artwork_icon.png';
 
 function MainMenu() {
   return ( 
-  <Grid2 container size ={12}>
+  <Grid2 container style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
     <HeroSection /> 
-        <Grid2 container size ={12} spacing={8}>
+        <Grid2 container style={{alignItems:'baseline'}}>
             {/* Villagers */}
-            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <Grid2 container>
                 <Link to="/villagers"
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
                     state={{ objectType: 'villager' }}
@@ -28,7 +28,7 @@ function MainMenu() {
             </Grid2>
 
             {/* Fish */}
-            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <Grid2>
                 <Link
                     to="/fish" 
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
@@ -40,7 +40,7 @@ function MainMenu() {
             </Grid2>
 
             {/* Bugs */}
-            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <Grid2>
                 <Link
                     to="/bugs" 
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
@@ -52,7 +52,7 @@ function MainMenu() {
             </Grid2>
 
             {/*Sea Creatures*/}
-            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <Grid2>
                 <Link
                     to="/seacreatures" 
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
@@ -64,7 +64,7 @@ function MainMenu() {
             </Grid2>
 
             {/*Fossils*/}
-            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <Grid2>
                 <Link
                     to="/fossils" 
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
@@ -76,7 +76,7 @@ function MainMenu() {
             </Grid2>
 
             {/*Artwork*/}
-            <Grid2 size={2} style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <Grid2>
                 <Link
                     to="/artworks" 
                     style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
