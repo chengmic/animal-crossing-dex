@@ -12,8 +12,6 @@ import ArtworkCard from './ArtworkCard'
 
 
 function Tiles({objectData, type}) {
-    const navigate = useNavigate();
-
     const [open, setOpen] = useState(false);
 
     const handleTileClick = () =>{
@@ -33,24 +31,23 @@ function Tiles({objectData, type}) {
     }
 
     let objectCard;
-
     if (type === 'villager') {
-        objectCard = <VillagerCard/>
+        objectCard = <VillagerCard villager = {objectData}/>
     }
     if (type === 'fish') {
-        objectCard = <FishCard/>
+        objectCard = <FishCard fish = {objectData}/>
     }
     if (type === 'bug') {
-        objectCard = <BugCard/>
+        objectCard = <BugCard bug = {objectData}/>
     }
     if (type === 'seaCreature') {
-        objectCard = <SeaCreatureCard/>
+        objectCard = <SeaCreatureCard seaCreature = {objectData}/>
     }
     if (type === 'fossil') {
-        objectCard = <FossilCard/>
+        objectCard = <FossilCard fossil = {objectData}/>
     }
     if (type === 'artwork') {
-        objectCard = <ArtworkCard/>
+        objectCard = <ArtworkCard artwork = {objectData}/>
     }
 
     return (

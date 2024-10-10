@@ -1,9 +1,7 @@
 import { Grid2 } from '@mui/material';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-function SeaCreatureCard() {
-    const location = useLocation();
-    const seaCreature = location.state;
+function SeaCreatureCard({seaCreature}) {
 
     const navigate = useNavigate();
 

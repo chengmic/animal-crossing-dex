@@ -1,12 +1,9 @@
 import { Grid2 } from '@mui/material';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-function VillagerCard() {
-    const location = useLocation();
-    const villager = location.state;
-
+function VillagerCard({villager}) {
     const navigate = useNavigate();
-
+    console.log(villager)
     const goBack = () => navigate(-1);
 
     return (

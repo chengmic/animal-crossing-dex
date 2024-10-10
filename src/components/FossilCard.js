@@ -1,12 +1,8 @@
 import { Grid2 } from '@mui/material';
-import { useLocation, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
-function FossilCard() {
-    const location = useLocation();
-    const fossil = location.state;
-
+function FossilCard({fossil}) {
     const navigate = useNavigate();
-
     const goBack = () => navigate(-1);
 
     return (

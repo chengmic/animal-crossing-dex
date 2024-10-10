@@ -29,21 +29,17 @@ function ThumbnailsPage({}) {
         fetchObjects();
     }, [objectType]);
 
-
     // helper function to get api url
     const getApiUrl = (type) => {
         if (type === 'villager') {
             return 'https://api.nookipedia.com/villagers?nhdetails=true'
         }
-
         else if (type === 'fish') {
             return 'https://api.nookipedia.com/nh/fish';
         }
-
         else if (type === 'bug') {
             return 'https://api.nookipedia.com/nh/bugs';
         }
-
         else if (type === 'seaCreature') {
             return 'https://api.nookipedia.com/nh/sea';
         }
@@ -54,7 +50,6 @@ function ThumbnailsPage({}) {
             return 'https://api.nookipedia.com/nh/art';
         }
     }
-
     
     return (
     <Grid2>
@@ -63,12 +58,12 @@ function ThumbnailsPage({}) {
         
         {/*Pass data to tile*/}
         <Grid2 container>
-            {objects.map((object) => {
-
+            {objects.map((object, index) => {
                 if (object.nh_details !== null){
                     return <Tiles
                     objectData={object}
                     type={objectType}
+                    key = {index}
                 />
                 }
                 

@@ -1,10 +1,8 @@
 import { Grid2 } from '@mui/material';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-function ArtworkCard() {
-    const location = useLocation();
-    const artwork = location.state;
 
+function ArtworkCard({artwork}) {
     const navigate = useNavigate();
 
     const goBack = () => navigate(-1);

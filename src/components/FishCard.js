@@ -1,12 +1,8 @@
 import { Grid2 } from '@mui/material';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import {useNavigate } from 'react-router-dom';
 
 
-function FishCard() {
-    const location = useLocation();
-    const fish = location.state;
-
+function FishCard({fish}) {
     const navigate = useNavigate();
     const goBack = () => navigate(-1);
 

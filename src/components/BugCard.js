@@ -1,10 +1,7 @@
 import { Grid2 } from '@mui/material';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-function BugCard() {
-    const location = useLocation();
-    const bug = location.state;
-
+function BugCard({bug}) {
     const navigate = useNavigate();
 
     const goBack = () => navigate(-1);
