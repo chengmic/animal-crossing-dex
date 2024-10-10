@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #6e644b;
 }
 
 @keyframes App-logo-spin {
@@ -46,6 +46,7 @@
 
 body {
   font-family: 'System', sans-serif;
+  color: #6e644b;
 }
 
 @font-face {
@@ -59,4 +60,15 @@ body {
   max-width: 100%; /* Make sure the image does not exceed container width */
   height: auto; /* Maintain aspect ratio */
   object-fit: contain; /* Ensure the entire image is visible within the container */
+}
+
+.mainWallpaper {
+  background-image: url(./assets/images/background.png);
+  background-size: 10%;
+  background-repeat: repeat;
+  min-height: 100vh;
+}
+
+.background {
+  background-color: #fcfbdf;
 }
