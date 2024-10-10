@@ -1,6 +1,7 @@
 import { Grid2 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
 import { useState } from 'react';
 
 import VillagerCard from './VillagerCard';
@@ -22,6 +23,18 @@ function Tiles({objectData, type}) {
         setOpen(false);
     }
 
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 400,
+        bgcolor: 'background.paper',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
+      };
+      
     let imageSource;
     if ((type === 'villager') && (objectData.nh_details !== null)) {
         imageSource = objectData.nh_details.icon_url
@@ -79,9 +92,9 @@ function Tiles({objectData, type}) {
             open = {open}
             onClose={handleClose}>
 
-            <Grid2>
+            <Box sx={style}>
                 {objectCard}
-            </Grid2>
+            </Box>
 
         </Modal>
     

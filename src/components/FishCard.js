@@ -1,20 +1,9 @@
 import { Grid2 } from '@mui/material';
-import {useNavigate } from 'react-router-dom';
 
 
 function FishCard({fish}) {
-    const navigate = useNavigate();
-    const goBack = () => navigate(-1);
-
-
-    /* Fish Card */
     return (
         <Grid2 container flexDirection={'column'}>
-            {/*Back Button*/}
-            <Grid2>
-                <button onClick={goBack}>Go Back</button>
-            </Grid2>
-            
             {/*Fish Name*/}
             <Grid2>
                 <h1>{fish.name}</h1>
