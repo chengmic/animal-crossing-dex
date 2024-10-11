@@ -1,6 +1,7 @@
 import { Grid2 } from '@mui/material';
 import { Link } from 'react-router-dom';
 import HeroSection from './HeroSection';
+import Card from '@mui/material/Card';
 
 import VillagerIcon from '../assets/images/villager_icon.png';
 import FishIcon from '../assets/images/fish_icon.png';
@@ -17,75 +18,87 @@ function MainMenu() {
     <HeroSection /> 
         <Grid2 container style={{alignItems:'baseline'}}>
             {/* Villagers */}
-            <Grid2 container>
-                <Link to="/villagers"
-                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
-                    state={{ objectType: 'villager' }}
-                >
-                        <img src={VillagerIcon} alt="sample" style={{maxWidth: "100%"}}></img>
-                        <p style={{wordBreak: 'break-all'}}>Villagers</p>
-                </Link>
-            </Grid2>
+            <Card>
+                <Grid2 container>
+                    <Link to="/villagers"
+                        style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
+                        state={{ objectType: 'villager' }}
+                    >
+                            <img src={VillagerIcon} alt="sample" style={{maxWidth: "100%"}}></img>
+                            <p style={{wordBreak: 'break-all'}}>Villagers</p>
+                    </Link>
+                </Grid2>
+            </Card>
 
             {/* Fish */}
-            <Grid2>
-                <Link
-                    to="/fish" 
-                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
-                    state={{ objectType: 'fish' }}
-                    >
-                        <img src={FishIcon} alt="sample" style={{maxWidth: "100%"}}></img>
-                        <p style={{wordBreak: 'break-all'}}>Fish</p>
-                </Link>
-            </Grid2>
+            <Card>
+                <Grid2>
+                    <Link
+                        to="/fish" 
+                        style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
+                        state={{ objectType: 'fish' }}
+                        >
+                            <img src={FishIcon} alt="sample" style={{maxWidth: "100%"}}></img>
+                            <p style={{wordBreak: 'break-all'}}>Fish</p>
+                    </Link>
+                </Grid2>
+            </Card>
 
             {/* Bugs */}
-            <Grid2>
-                <Link
-                    to="/bugs" 
-                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
-                    state={{ objectType: 'bug' }}
-                >
-                        <img src={BugIcon} alt="sample" style={{maxWidth: "100%"}}></img>
-                        <p style={{wordBreak: 'break-all'}}>Bugs</p>
-                </Link>
-            </Grid2>
+            <Card>
+                <Grid2>
+                    <Link
+                        to="/bugs" 
+                        style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
+                        state={{ objectType: 'bug' }}
+                    >
+                            <img src={BugIcon} alt="sample" style={{maxWidth: "100%"}}></img>
+                            <p style={{wordBreak: 'break-all'}}>Bugs</p>
+                    </Link>
+                </Grid2>
+            </Card>
 
             {/*Sea Creatures*/}
-            <Grid2>
-                <Link
-                    to="/seacreatures" 
-                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
-                    state={{ objectType: 'seaCreature' }}
-                >
-                        <img src={SeaCreatureIcon} alt="sample" style={{maxWidth: "100%"}}></img>
-                        <p style={{wordBreak: 'break-all'}}>Sea Creatures</p>
-                </Link>
-            </Grid2>
+            <Card>
+                <Grid2>
+                    <Link
+                        to="/seacreatures" 
+                        style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
+                        state={{ objectType: 'seaCreature' }}
+                    >
+                            <img src={SeaCreatureIcon} alt="sample" style={{maxWidth: "100%"}}></img>
+                            <p style={{wordBreak: 'break-all'}}>Sea Creatures</p>
+                    </Link>
+                </Grid2>
+            </Card>
 
             {/*Fossils*/}
-            <Grid2>
-                <Link
-                    to="/fossils" 
-                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
-                    state={{ objectType: 'fossil' }}
-                >
-                        <img src={FossilIcon} alt="sample" style={{maxWidth: "100%"}}></img>
-                        <p style={{wordBreak: 'break-all'}}>Fossils</p>
-                </Link>
-            </Grid2>
+            <Card>
+                <Grid2>
+                    <Link
+                        to="/fossils" 
+                        style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
+                        state={{ objectType: 'fossil' }}
+                    >
+                            <img src={FossilIcon} alt="sample" style={{maxWidth: "100%"}}></img>
+                            <p style={{wordBreak: 'break-all'}}>Fossils</p>
+                    </Link>
+                </Grid2>
+            </Card>
 
             {/*Artwork*/}
-            <Grid2>
-                <Link
-                    to="/artworks" 
-                    style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
-                    state={{ objectType: 'artwork' }}
-                >
-                        <img src={ArtworkIcon} alt="sample" style={{maxWidth: "100%"}}></img>
-                        <p style={{wordBreak: 'break-all'}}>Artworks</p>
-                </Link>
-            </Grid2>
+            <Card>
+                <Grid2>
+                    <Link
+                        to="/artworks" 
+                        style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}
+                        state={{ objectType: 'artwork' }}
+                    >
+                            <img src={ArtworkIcon} alt="sample" style={{maxWidth: "100%"}}></img>
+                            <p style={{wordBreak: 'break-all'}}>Artworks</p>
+                    </Link>
+                </Grid2>
+            </Card>
         </Grid2>
     </Grid2>
     );
