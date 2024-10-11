@@ -12,7 +12,7 @@ import { Container } from '@mui/material';
 function App() {
   return (
     <div className='mainWallpaper'>
-      <Container className='background'>
+      <Container className='background' style={{minHeight: '100vh'}}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<MainMenu />} />

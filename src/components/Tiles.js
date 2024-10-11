@@ -10,6 +10,7 @@ import BugCard from './BugCard'
 import SeaCreatureCard from './SeaCreatureCard'
 import FossilCard from './FossilCard'
 import ArtworkCard from './ArtworkCard'
+import Card from '@mui/material/Card';
 
 
 function Tiles({objectData, type}) {
@@ -64,41 +65,43 @@ function Tiles({objectData, type}) {
     }
 
     return (
-    <Grid2>
-    
-    {/*Tile*/}
-        <Grid2 container
-            size={1}
-            style= {{flexDirection: 'column', alignItems: 'center'}}
-            onClick={handleTileClick}
-        >
-            {/*Portrait*/}
-            <Grid2>
-                <img
-                    src= {imageSource}
-                    alt="portrait"
-                    style={{maxWidth: "100%"}}
-                ></img>
-            </Grid2>
-            
-            {/*Name*/}
-            <Grid2>
-                {objectData.name}
-            </Grid2>
+        <Grid2 style={{ padding: '10px'}}>
+            <Card style={{ width: '200px', height: '200px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <Grid2 container>
+                    {/*Tile*/}
+                    <Grid2 container
+                        style= {{flexDirection: 'column', alignItems: 'center'}}
+                        onClick={handleTileClick}
+                    >
+                        {/*Portrait*/}
+                        <Grid2>
+                            <img
+                                src= {imageSource}
+                                alt="portrait"
+                                style={{maxWidth: "100%"}}
+                            ></img>
+                        </Grid2>
+                        
+                        {/*Name*/}
+                        <Grid2>
+                            {objectData.name}
+                        </Grid2>
+                    </Grid2>
+
+                    {/*Modal*/}
+                    <Modal
+                        open = {open}
+                        onClose={handleClose}>
+
+                        <Box sx={style}>
+                            {objectCard}
+                        </Box>
+
+                    </Modal>
+                
+                </Grid2>
+            </Card>
         </Grid2>
-
-        {/*Modal*/}
-        <Modal
-            open = {open}
-            onClose={handleClose}>
-
-            <Box sx={style}>
-                {objectCard}
-            </Box>
-
-        </Modal>
-    
-    </Grid2>
     );
 }
 
