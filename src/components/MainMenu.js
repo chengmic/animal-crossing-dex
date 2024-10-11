@@ -16,7 +16,7 @@ function MainMenu() {
   return ( 
   <Grid2 container style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
     <HeroSection /> 
-        <Grid2 container style={{alignItems:'baseline'}}>
+        <Grid2 container spacing={2} style={{alignItems:'baseline'}}>
             {/* Villagers */}
             <Card>
                 <Grid2 container>
