@@ -8,17 +8,19 @@ import MainMenu from './components/MainMenu';
 import ThumbnailsPage from './components/ThumbnailsPage';
 import { Container } from '@mui/material';
 
+import { HashRouter } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className='mainWallpaper'>
       <Container className='background' style={{minHeight: '100vh'}}>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<MainMenu />} />
             <Route path="/:objecttype" element={<ThumbnailsPage />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </Container>
     </div>
   );
